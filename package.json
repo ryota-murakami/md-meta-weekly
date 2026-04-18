@@ -1,0 +1,14 @@
+{
+  "name": "md-meta-weekly",
+  "version": "1.0.0",
+  "description": "Yu-Gi-Oh! Master Duel 環境ダッシュボード — 毎週自動更新",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update-meta.mjs",
+    "update:dry": "node scripts/update-meta.mjs --dry"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

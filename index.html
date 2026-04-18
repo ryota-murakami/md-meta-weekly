@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ja" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MD Meta Terminal — マスターデュエル環境ダッシュボード</title>
+    <meta name="description" content="遊戯王マスターデュエルの現行環境 Tier 表・使用率・勝率・マッチアップ・トレンドを可視化するダッシュボード" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <!-- Background grid -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 32 32" fill="none" aria-label="MD Meta Terminal logo">
+          <path d="M4 4 L4 28 L10 28 L10 14 L16 22 L22 14 L22 28 L28 28 L28 4 L22 4 L16 12 L10 4 Z" fill="currentColor" />
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">MD Meta Terminal</span>
+          <span class="brand-sub">v.2026.04</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#overview" class="nav-item active" data-section="overview">
+          <span class="nav-ico">◆</span>概要
+        </a>
+        <a href="#tier" class="nav-item" data-section="tier">
+          <span class="nav-ico">▲</span>Tier 表
+        </a>
+        <a href="#matchup" class="nav-item" data-section="matchup">
+          <span class="nav-ico">◈</span>マッチアップ
+        </a>
+        <a href="#trend" class="nav-item" data-section="trend">
+          <span class="nav-ico">∿</span>トレンド
+        </a>
+        <a href="#decks" class="nav-item" data-section="decks">
+          <span class="nav-ico">❖</span>デッキ詳細
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="stat-card">
+          <span class="stat-label">最終更新</span>
+          <span class="stat-value" id="last-updated">—</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">新弾</span>
+          <span class="stat-value">ザ・フレンジー・チューニング</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <!-- Header -->
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">YU-GI-OH! MASTER DUEL</div>
+          <h1 class="page-title">環境メタダッシュボード</h1>
+          <p class="page-sub">
+            2026年4月9日 公式使用率レポート＋トーナメント結果の統合分析
+          </p>
+        </div>
+        <div class="topbar-actions">
+          <div class="ticker" aria-live="polite">
+            <span class="ticker-dot"></span>
+            <span id="ticker-text">LIVE — Master 1 環境</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="section">
+        <div class="section-head">
+          <h2>概要</h2>
+          <span class="section-meta">KPI</span>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi">
+            <span class="kpi-label">追跡デッキ数</span>
+            <span class="kpi-value" id="kpi-decks">—</span>
+            <span class="kpi-delta positive">+3 新弾デッキ</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-label">Tier S+ / S</span>
+            <span class="kpi-value" id="kpi-top">—</span>
+            <span class="kpi-delta">環境トップ層</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-label">最高使用率</span>
+            <span class="kpi-value" id="kpi-top-usage">—</span>
+            <span class="kpi-delta positive" id="kpi-top-usage-name">—</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-label">最高勝率</span>
+            <span class="kpi-value" id="kpi-top-winrate">—</span>
+            <span class="kpi-delta positive" id="kpi-top-winrate-name">—</span>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <div class="card usage-chart-card">
+            <div class="card-head">
+              <h3>使用率トップ 10</h3>
+              <span class="card-meta">Master 1 · 直近2週間</span>
+            </div>
+            <div id="usage-bars" class="usage-bars"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3>リミットレギュレーション</h3>
+              <span class="card-meta">2026/04/01 改定</span>
+            </div>
+            <p id="banlist-summary" class="card-body-text"></p>
+            <a
+              class="card-link"
+              href="https://www.masterduelmeta.com/tier-list"
+              target="_blank"
+              rel="noopener"
+              >MDM 規制リスト全文 →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- TIER LIST -->
+      <section id="tier" class="section">
+        <div class="section-head">
+          <h2>Tier 表</h2>
+          <span class="section-meta">TIER LIST</span>
+        </div>
+        <p class="section-desc">
+          MDM のパワーランク (トナメ登場数) と AppMedia の Tier
+          表の合成。行をクリックするとデッキ詳細にジャンプします。
+        </p>
+        <div id="tier-list" class="tier-list"></div>
+      </section>
+
+      <!-- MATCHUP -->
+      <section id="matchup" class="section">
+        <div class="section-head">
+          <h2>マッチアップヒートマップ</h2>
+          <span class="section-meta">WIN RATE MATRIX</span>
+        </div>
+        <p class="section-desc">
+          行のデッキが列のデッキと当たった際の勝率 (%)。
+          <span class="legend">
+            <span class="legend-sw loss"></span>&lt; 45%
+            <span class="legend-sw even"></span>45-55%
+            <span class="legend-sw win"></span>&gt; 55%
+          </span>
+        </p>
+        <div class="matchup-scroll">
+          <div id="matchup-table" class="matchup-table"></div>
+        </div>
+      </section>
+
+      <!-- TREND -->
+      <section id="trend" class="section">
+        <div class="section-head">
+          <h2>使用率トレンド</h2>
+          <span class="section-meta">12 WEEKS</span>
+        </div>
+        <p class="section-desc">
+          直近 12 週間の主要デッキ使用率推移。凡例クリックで表示切替。
+        </p>
+        <div class="card chart-card">
+          <canvas id="trend-chart" height="320"></canvas>
+        </div>
+      </section>
+
+      <!-- DECK DETAILS -->
+      <section id="decks" class="section">
+        <div class="section-head">
+          <h2>デッキ詳細</h2>
+          <span class="section-meta">ARCHETYPES</span>
+        </div>
+        <div class="filter-row">
+          <div class="tab-group" role="tablist">
+            <button class="tab active" data-filter="all">ALL</button>
+            <button class="tab" data-filter="S+">S+</button>
+            <button class="tab" data-filter="S">S</button>
+            <button class="tab" data-filter="A">A</button>
+            <button class="tab" data-filter="B">B</button>
+            <button class="tab" data-filter="C">C</button>
+          </div>
+        </div>
+        <div id="deck-grid" class="deck-grid"></div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div>
+          <strong>Data sources</strong>
+          <ul id="sources-list" class="sources-list"></ul>
+        </div>
+        <div class="footer-note">
+          本ダッシュボードは個人利用・教育目的で作成。KONAMI 社公式ではありません。Tier
+          評価は複数ソースの合成。
+        </div>
+      </footer>
+    </main>
+
+    <!-- Deck detail modal -->
+    <div class="modal" id="deck-modal" aria-hidden="true" role="dialog">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-panel">
+        <button class="modal-close" data-close aria-label="閉じる">✕</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
