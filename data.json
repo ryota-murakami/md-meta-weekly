@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-08",
+  "lastUpdated": "2026-05-15",
   "sources": [
     {
       "name": "Master Duel Meta — Apr 9 Official Report",
@@ -25,7 +25,7 @@
       "short": "KT",
       "nameEn": "Killer Tune",
       "tier": "S+",
-      "usageRate": 17.09,
+      "usageRate": 17.62,
       "winRate": 55.2,
       "trend": "down",
       "colors": [
@@ -64,7 +64,7 @@
           "url": "https://gachi-matome.com/trend-dm/"
         }
       ],
-      "power": 28.5
+      "power": 27
     },
     {
       "id": "vsk9",
@@ -72,9 +72,9 @@
       "short": "VSK9",
       "nameEn": "Vanquish Soul K9",
       "tier": "S",
-      "usageRate": 12.56,
+      "usageRate": 5.18,
       "winRate": 53.4,
-      "trend": "up",
+      "trend": "down",
       "colors": [
         "#ef4444",
         "#f97316"
@@ -107,7 +107,7 @@
           "url": "https://www.masterduelmeta.com/tier-list/deck-types"
         }
       ],
-      "power": 13.5
+      "power": 10.5
     },
     {
       "id": "dragontail",
@@ -115,7 +115,7 @@
       "short": "Drc",
       "nameEn": "Dracotail",
       "tier": "B",
-      "usageRate": 2.51,
+      "usageRate": 2.07,
       "winRate": 54,
       "trend": "down",
       "colors": [
@@ -148,7 +148,7 @@
           "url": "https://www.masterduelmeta.com/articles/news/apr-09-2026/card-usage-update"
         }
       ],
-      "power": 2
+      "power": 3
     },
     {
       "id": "yummy",
@@ -196,10 +196,10 @@
       "nameJa": "オルフェゴール",
       "short": "Orc",
       "nameEn": "Orcust",
-      "tier": "C",
-      "usageRate": 2.51,
+      "tier": "B",
+      "usageRate": 4.66,
       "winRate": 54,
-      "trend": "down",
+      "trend": "up",
       "colors": [
         "#64748b",
         "#334155"
@@ -231,7 +231,7 @@
           "url": "https://www.masterduelmeta.com/articles/news/apr-09-2026/card-usage-update"
         }
       ],
-      "power": 1
+      "power": 2
     },
     {
       "id": "mitsurugi-ryzeal",
@@ -321,7 +321,7 @@
       "short": "MAL",
       "nameEn": "Maliss",
       "tier": "A",
-      "usageRate": 2.01,
+      "usageRate": 2.07,
       "winRate": 53,
       "trend": "down",
       "colors": [
@@ -361,7 +361,7 @@
       "short": "TEN",
       "nameEn": "Tenpai Dragon",
       "tier": "A",
-      "usageRate": 5.8,
+      "usageRate": 1.04,
       "winRate": 52.5,
       "trend": "down",
       "colors": [
@@ -630,7 +630,7 @@
       "nameJa": "ラビュリンス",
       "nameEn": "Labrynth",
       "tier": "C",
-      "usageRate": 2.51,
+      "usageRate": 1.55,
       "winRate": 50,
       "trend": "down",
       "colors": [
@@ -705,8 +705,8 @@
       "id": "sky-striker",
       "nameJa": "閃刀姫",
       "nameEn": "Sky Striker",
-      "tier": "B",
-      "usageRate": 8.04,
+      "tier": "A",
+      "usageRate": 7.25,
       "winRate": 49.5,
       "trend": "up",
       "colors": [
@@ -731,7 +731,7 @@
         "パワー不足"
       ],
       "comboLinks": [],
-      "power": 2
+      "power": 4.5
     },
     {
       "id": "white-forest",
@@ -769,7 +769,7 @@
       "nameJa": "ブルーアイズ",
       "nameEn": "Blue-Eyes",
       "tier": "B",
-      "usageRate": 2.01,
+      "usageRate": 1.55,
       "winRate": 48.5,
       "trend": "down",
       "colors": [
@@ -796,7 +796,7 @@
         "構築コスト"
       ],
       "comboLinks": [],
-      "power": 3
+      "power": 2.5
     },
     {
       "id": "traptrix",
@@ -992,7 +992,6 @@
   },
   "trend": {
     "weeks": [
-      "2026-03-04",
       "2026-03-11",
       "2026-03-18",
       "2026-03-25",
@@ -1003,11 +1002,11 @@
       "2026-04-18",
       "2026-04-24",
       "2026-05-01",
-      "2026-05-08"
+      "2026-05-08",
+      "2026-05-15"
     ],
     "series": {
       "killer-tune": [
-        null,
         null,
         null,
         null,
@@ -1018,10 +1017,10 @@
         21.12,
         26.07,
         17.7,
-        17.09
+        17.09,
+        17.62
       ],
       "vsk9": [
-        18.5,
         19.3,
         20.1,
         21.4,
@@ -1032,10 +1031,10 @@
         4.78,
         6.23,
         11.11,
-        12.56
+        12.56,
+        5.18
       ],
       "dragontail": [
-        11.1,
         11.8,
         12.2,
         12.8,
@@ -1046,10 +1045,10 @@
         5.98,
         3.5,
         2.88,
-        2.51
+        2.51,
+        2.07
       ],
       "yummy": [
-        13.4,
         13.8,
         13.9,
         14,
@@ -1060,10 +1059,10 @@
         1.2,
         1.17,
         1.17,
+        1.17,
         1.17
       ],
       "orcust": [
-        5.9,
         6.3,
         6.8,
         7.2,
@@ -1074,10 +1073,10 @@
         7.17,
         6.23,
         1.65,
-        2.51
+        2.51,
+        4.66
       ],
       "mitsurugi-ryzeal": [
-        8.1,
         8,
         7.9,
         7.8,
@@ -1088,10 +1087,10 @@
         1.99,
         1.17,
         1.17,
+        1.17,
         1.17
       ],
       "gemknight": [
-        6,
         6.1,
         6.3,
         6.5,
@@ -1102,10 +1101,10 @@
         1.99,
         1.99,
         1.99,
+        1.99,
         1.99
       ],
       "maliss": [
-        6.9,
         6.7,
         6.6,
         6.4,
@@ -1116,10 +1115,10 @@
         2.39,
         2.72,
         3.29,
-        2.01
+        2.01,
+        2.07
       ],
       "tenpai": [
-        7.4,
         7,
         6.6,
         6.3,
@@ -1130,10 +1129,10 @@
         5.8,
         5.8,
         5.8,
-        5.8
+        5.8,
+        1.04
       ],
       "crystron": [
-        4.2,
         4.3,
         4.4,
         4.5,
@@ -1144,10 +1143,10 @@
         4.6,
         4.6,
         4.6,
+        4.6,
         4.6
       ],
       "ayarashi": [
-        3.7,
         3.9,
         4,
         4.1,
@@ -1158,10 +1157,10 @@
         4.2,
         1.17,
         1.17,
+        1.17,
         1.17
       ],
       "snake-eye": [
-        6.8,
         5.8,
         5,
         4.4,
@@ -1172,15 +1171,16 @@
         3.8,
         3.8,
         3.8,
+        3.8,
         3.8
       ],
       "yubel": [
-        5,
         4.6,
         4.2,
         3.9,
         3.7,
         3.6,
+        3.5,
         3.5,
         3.5,
         3.5,
