@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-18",
+  "lastUpdated": "2026-09-25",
   "sources": [
     {
       "name": "Master Duel Meta — Apr 9 Official Report",
@@ -25,7 +25,7 @@
       "short": "KT",
       "nameEn": "Killer Tune",
       "tier": "S",
-      "usageRate": 1.69,
+      "usageRate": 2,
       "winRate": 55.2,
       "trend": "down",
       "colors": [
@@ -64,17 +64,17 @@
           "url": "https://gachi-matome.com/trend-dm/"
         }
       ],
-      "power": 9
+      "power": 10
     },
     {
       "id": "vsk9",
       "nameJa": "VSK9",
       "short": "VSK9",
       "nameEn": "Vanquish Soul K9",
-      "tier": "B",
-      "usageRate": 3.69,
+      "tier": "A",
+      "usageRate": 2.67,
       "winRate": 53.4,
-      "trend": "up",
+      "trend": "down",
       "colors": [
         "#ef4444",
         "#f97316"
@@ -107,7 +107,7 @@
           "url": "https://www.masterduelmeta.com/tier-list/deck-types"
         }
       ],
-      "power": 3
+      "power": 4
     },
     {
       "id": "dragontail",
@@ -115,9 +115,9 @@
       "short": "Drc",
       "nameEn": "Dracotail",
       "tier": "S+",
-      "usageRate": 4.49,
+      "usageRate": 8,
       "winRate": 54,
-      "trend": "down",
+      "trend": "up",
       "colors": [
         "#06b6d4",
         "#0891b2"
@@ -156,7 +156,7 @@
       "short": "Ymy",
       "nameEn": "Yummy",
       "tier": "B",
-      "usageRate": 3.93,
+      "usageRate": 4.67,
       "winRate": 53,
       "trend": "up",
       "colors": [
@@ -197,7 +197,7 @@
       "short": "Orc",
       "nameEn": "Orcust",
       "tier": "B",
-      "usageRate": 2.25,
+      "usageRate": 1.33,
       "winRate": 54,
       "trend": "down",
       "colors": [
@@ -239,9 +239,9 @@
       "short": "MR",
       "nameEn": "Mitsurugi Ryzeal",
       "tier": "B",
-      "usageRate": 2.25,
+      "usageRate": 3.33,
       "winRate": 53,
-      "trend": "down",
+      "trend": "up",
       "colors": [
         "#84cc16",
         "#65a30d"
@@ -320,7 +320,7 @@
       "nameJa": "M∀LICE",
       "short": "MAL",
       "nameEn": "Maliss",
-      "tier": "C",
+      "tier": "B",
       "usageRate": 2.25,
       "winRate": 53,
       "trend": "down",
@@ -353,7 +353,7 @@
           "url": "https://www.masterduelmeta.com/tier-list"
         }
       ],
-      "power": 1
+      "power": 2
     },
     {
       "id": "tenpai",
@@ -630,7 +630,7 @@
       "nameJa": "ラビュリンス",
       "nameEn": "Labrynth",
       "tier": "C",
-      "usageRate": 2.29,
+      "usageRate": 1.33,
       "winRate": 50,
       "trend": "down",
       "colors": [
@@ -705,8 +705,8 @@
       "id": "sky-striker",
       "nameJa": "閃刀姫",
       "nameEn": "Sky Striker",
-      "tier": "A",
-      "usageRate": 9.55,
+      "tier": "S",
+      "usageRate": 9.33,
       "winRate": 49.5,
       "trend": "up",
       "colors": [
@@ -731,7 +731,7 @@
         "パワー不足"
       ],
       "comboLinks": [],
-      "power": 6
+      "power": 8
     },
     {
       "id": "white-forest",
@@ -769,8 +769,8 @@
       "id": "blue-eyes",
       "nameJa": "ブルーアイズ",
       "nameEn": "Blue-Eyes",
-      "tier": "A",
-      "usageRate": 2.48,
+      "tier": "B",
+      "usageRate": 2,
       "winRate": 48.5,
       "trend": "down",
       "colors": [
@@ -797,7 +797,7 @@
         "構築コスト"
       ],
       "comboLinks": [],
-      "power": 4
+      "power": 3.5
     },
     {
       "id": "traptrix",
@@ -993,7 +993,6 @@
   },
   "trend": {
     "weeks": [
-      "2026-07-03",
       "2026-07-10",
       "2026-07-17",
       "2026-07-24",
@@ -1004,11 +1003,11 @@
       "2026-08-28",
       "2026-09-04",
       "2026-09-11",
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-25"
     ],
     "series": {
       "killer-tune": [
-        12.22,
         10.53,
         8.84,
         9.71,
@@ -1019,10 +1018,10 @@
         5.18,
         4.65,
         3.23,
-        1.69
+        1.69,
+        2
       ],
       "vsk9": [
-        1.67,
         1.67,
         1.67,
         1.67,
@@ -1033,10 +1032,10 @@
         1.09,
         3.72,
         3.69,
-        3.69
+        3.69,
+        2.67
       ],
       "dragontail": [
-        8.89,
         8.55,
         6.12,
         5.71,
@@ -1047,10 +1046,10 @@
         8.29,
         7.44,
         5.99,
-        4.49
+        4.49,
+        8
       ],
       "yummy": [
-        1.67,
         1.97,
         1.97,
         1.97,
@@ -1061,10 +1060,10 @@
         4.66,
         4.65,
         2.3,
-        3.93
+        3.93,
+        4.67
       ],
       "orcust": [
-        1.67,
         1.67,
         1.67,
         1.67,
@@ -1075,10 +1074,10 @@
         2.29,
         2.29,
         2.76,
-        2.25
+        2.25,
+        1.33
       ],
       "mitsurugi-ryzeal": [
-        1.82,
         1.32,
         1.32,
         1.32,
@@ -1089,10 +1088,10 @@
         2.59,
         2.33,
         1.38,
-        2.25
+        2.25,
+        3.33
       ],
       "gemknight": [
-        1.82,
         1.32,
         1.32,
         1.32,
@@ -1103,10 +1102,10 @@
         2.07,
         1.4,
         1.4,
+        1.4,
         1.4
       ],
       "maliss": [
-        1.67,
         3.29,
         1.36,
         1.36,
@@ -1117,6 +1116,7 @@
         3.63,
         2.33,
         2.3,
+        2.25,
         2.25
       ],
       "tenpai": [
@@ -1125,7 +1125,7 @@
         1.04,
         1.04,
         1.04,
-        1.04,
+        1.65,
         1.65,
         1.65,
         1.65,
@@ -1154,8 +1154,8 @@
         1.17,
         1.17,
         1.17,
-        1.17,
         2.29,
+        1.55,
         1.55,
         1.55,
         1.55,
